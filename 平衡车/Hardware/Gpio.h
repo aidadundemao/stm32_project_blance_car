@@ -84,6 +84,17 @@
 #define PWMA_GPIO_PIN GPIO_Pin_0
 #define PWMB_GPIO  GPIOA
 #define PWMB_GPIO_PIN GPIO_Pin_1
+                   
+/**
+  *¿ØÖÆTB6612µÄSTBYÎ»
+*/
+#define STBY_GPIO  GPIOA
+#define STBY_GPIO_PIN GPIO_Pin_4
+
+#define STBY(x) do{ x ?\
+                    GPIO_SetBits(STBY_GPIO, STBY_GPIO_PIN):\
+                    GPIO_ResetBits(STBY_GPIO, STBY_GPIO_PIN);\
+                   }while(0)                  
  
 
 #endif
