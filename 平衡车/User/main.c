@@ -17,6 +17,12 @@ int main(void)
 	
 	while (1)
 	{
-		
+		MPU6050_GetData(&AX, &AY, &AZ, &GX, &GY, &GZ);
+		OLED_ShowSignedNum(2, 1, AX, 5);
+		OLED_ShowSignedNum(3, 1, AY, 5);
+		OLED_ShowSignedNum(4, 1, AZ, 5);
+		OLED_ShowSignedNum(2, 8, GX, 5);
+		OLED_ShowSignedNum(3, 8, GY, 5);
+		OLED_ShowSignedNum(4, 8, GZ, 5);
 	}
 }
