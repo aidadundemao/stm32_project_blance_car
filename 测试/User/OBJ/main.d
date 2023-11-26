@@ -31,3 +31,4 @@
 .\obj\main.o: hardware\usart.h
 .\obj\main.o: D:\MDK_STM32\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\main.o: hardware\MPU6050.h
+.\obj\main.o: hardware\MyI2C.h

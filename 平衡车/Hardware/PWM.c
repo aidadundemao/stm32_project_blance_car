@@ -1,5 +1,5 @@
 #include "stm32f10x.h"                  // Device header
-
+#include "Gpio.h"
 void PWM_Init(void)
 {
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
@@ -7,10 +7,13 @@ void PWM_Init(void)
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	
+    GPIO_InitStructure.GPIO_Pin = PWMA_GPIO_PIN;
+	GPIO_Init(PWMA_GPIO, &GPIO_InitStructure);
+    
+	GPIO_InitStructure.GPIO_Pin = PWMB_GPIO_PIN;
+	GPIO_Init(PWMB_GPIO, &GPIO_InitStructure);
+    
 	TIM_InternalClockConfig(TIM2);
 	
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
@@ -27,12 +30,19 @@ void PWM_Init(void)
 	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
 	TIM_OCInitStructure.TIM_Pulse = 0;		//CCR
-	TIM_OC3Init(TIM2, &TIM_OCInitStructure);
+	
+    TIM_OC1Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC2Init(TIM2, &TIM_OCInitStructure);
 	
 	TIM_Cmd(TIM2, ENABLE);
 }
 
-void PWM_SetCompare3(uint16_t Compare)
+void PWM_SetCompare1(uint16_t Compare)
 {
-	TIM_SetCompare3(TIM2, Compare);
+	TIM_SetCompare1(TIM2, Compare);
+}
+
+void PWM_SetCompare2(uint16_t Compare)
+{
+	TIM_SetCompare2(TIM2, Compare);
 }

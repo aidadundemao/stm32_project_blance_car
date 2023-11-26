@@ -1,6 +1,6 @@
 #include "stm32f10x.h"                  // Device header
 #include "PWM.h"
-
+#include "Gpio.h"
 void Motor_Init(void)
 {
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
@@ -20,12 +20,12 @@ void Motor_SetSpeed(int8_t Speed)
 	{
 		GPIO_SetBits(GPIOA, GPIO_Pin_4);
 		GPIO_ResetBits(GPIOA, GPIO_Pin_5);
-		PWM_SetCompare3(Speed);
+		PWM_SetCompare1(Speed);
 	}
 	else
 	{
 		GPIO_ResetBits(GPIOA, GPIO_Pin_4);
 		GPIO_SetBits(GPIOA, GPIO_Pin_5);
-		PWM_SetCompare3(-Speed);
+		PWM_SetCompare1(-Speed);
 	}
 }

@@ -1,5 +1,5 @@
 Dependencies for Project 'USART', Target 'USART': (DO NOT MODIFY !)
-F (.\hardware\main.c)(0x656201AC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\SysLib\CORE -I..\SysLib\STDV35_LIB\inc -I..\SysLib\SYSTEM -I.\hardware -I..\SysLib\SYSTEM\delay-I D:\桌面文件\小项目\平衡车\测试\User\RTE-I D:\MDK_STM32\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK_STM32\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+F (.\hardware\main.c)(0x6562CE8B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\SysLib\CORE -I..\SysLib\STDV35_LIB\inc -I..\SysLib\SYSTEM -I.\hardware -I..\SysLib\SYSTEM\delay-I D:\桌面文件\小项目\平衡车\测试\User\RTE-I D:\MDK_STM32\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK_STM32\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (..\SysLib\SYSTEM\stm32f10x.h)(0x4D783CB4)
 I (..\SysLib\CORE\core_cm3.h)(0x4D523B58)
 I (D:\MDK_STM32\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -31,6 +31,7 @@ I (..\SysLib\STDV35_LIB\inc\misc.h)(0x4D783BB4)
 I (hardware\usart.h)(0x615ADA06)
 I (D:\MDK_STM32\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (hardware\MPU6050.h)(0x63985B24)
+I (hardware\MyI2C.h)(0x63984C44)
 F (.\hardware\usart.c)(0x6554222F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\SysLib\CORE -I..\SysLib\STDV35_LIB\inc -I..\SysLib\SYSTEM -I.\hardware -I..\SysLib\SYSTEM\delay-I D:\桌面文件\小项目\平衡车\测试\User\RTE-I D:\MDK_STM32\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK_STM32\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\usart.o --omf_browse .\obj\usart.crf --depend .\obj\usart.d)
 I (hardware\usart.h)(0x615ADA06)
 I (..\SysLib\SYSTEM\stm32f10x.h)(0x4D783CB4)
