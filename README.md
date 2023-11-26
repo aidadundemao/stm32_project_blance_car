@@ -1,0 +1,4 @@
+# stm32_project_blance_car
+stm32_project_blance_car
+##采用的方法
+利用串口通信向网络模块发送AT指令进行连接mqtt服务器
